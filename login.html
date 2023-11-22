@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login to Evento</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    <div class="logo">
+      <div class="cont"><img src="" alt="" /></div>
+      <span>G<span>roove</span></span>
+    </div>
+    <div class="center">
+      <h1>Login</h1>
+      <form action="" method="post">
+        <div class="text_fill">
+          <input type="email" name="login name" id="email" required />
+          <span></span>
+          <label for="login name">email / Username</label>
+        </div>
+        <div class="text_fill">
+          <input type="password" name="loginpassword" id="password" minlength="8" maxlength="20" required />
+          <span></span>
+          <label for="loginpassword">password</label>
+        </div>
+        <div class="pass">forgot password</div>
+        <input type="submit" id="submitbutton" value="submit"> 
+        <div class="signup_link">Not a member?</div>
+      </form>
+    </div>
+    <script type="text/javascript">
+      const submitit = document.getElementById('submitbutton');
+
+      submitit.addEventListener("click", function(e) {
+      // prevent form from being submitted
+      e.preventDefault();
+
+      
+
+      const email = document.getElementById('email');
+      const password = document.getElementById('password');
+
+      if (email.value !== '' && password.value !== '') {
+        alert("Login Successful")
+        window.location = "home1.html"; 
+        } 
+      });
+    </script>
+
+  </body>
+
+</html>
